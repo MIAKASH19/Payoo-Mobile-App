@@ -38,63 +38,68 @@
           <i class="ri-logout-box-line"></i>Log Out
         </button>
       </nav>
-      <!-- <div>
+      <div>
         <h1 class="poppinsBold my-2">🔥 Welcome to Payooo!</h1>
         <p class="text-xs text-gray-500 pb-3">
           Enjoy easy and convenient financial sevices with us Cashout charge is
           low and insane.
         </p>
-      </div> -->
-       <div class="grid grid-cols-3 gap-4">
+      </div>
+      <div class="grid grid-cols-3 gap-4">
         <div
-        id="add-money-btn"
-          class="border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
+          id="add-money-btn"
+          class="formBtns cursor-pointer border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
         >
           <img src="./assets/wallet1.png" class="" alt="" />
           <p class="text-xs">Add Money</p>
         </div>
         <div
-        id="cash-out-btn"
-          class="border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
+          id="cash-out-btn"
+          class="formBtns cursor-pointer border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
         >
           <img src="./assets/send1.png" class="w-[20px]" alt="" />
           <p class="text-xs">Cashout</p>
         </div>
         <div
-          class="border flex flex-col gap-1 border-gray-300 rounded-xl text-center flex items-center justify-center p-1"
+          id="transfer-btn"
+          class="formBtns cursor-pointer border flex flex-col gap-1 border-gray-300 rounded-xl text-center flex items-center justify-center p-1"
         >
           <img src="./assets/money1.png" class="w-[20px]" alt="" />
           <p class="text-xs">Transfer Money</p>
         </div>
         <div
-          class="border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
+          id="bonus-btn"
+          class="formBtns cursor-pointer border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
         >
           <img src="./assets/bonus1.png" class="w-[20px]" alt="" />
           <p class="text-xs">Get Bonus</p>
         </div>
         <div
-          class="border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
+          id="bill-btn"
+          class="formBtns cursor-pointer border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
         >
           <img src="./assets/purse1.png" class="w-[20px]" alt="" />
           <p class="text-xs">Pay Bill</p>
         </div>
         <div
-          class="border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
+          id="transaction-btn"
+          class="formBtns cursor-pointer border flex flex-col gap-1 border-gray-300 rounded-xl text-center p-4 flex items-center justify-center"
         >
           <img src="./assets/transaction1.png" class="" alt="" />
           <p class="text-xs">Transaction</p>
         </div>
-      </div> 
+      </div>
     </div>
     <div class="all-forms-parent">
       <!-- Add Money Form Section-->
-      <div id="add-money-parent">
+      <div class="forms" id="add-money-parent" style="display: none">
         <h1 class="ml-5 text-sm my-4 poppinsBold">Add Money</h1>
 
         <form class="p-7 bg-white w-[340px] rounded-2xl mx-auto">
           <div class="mb-3">
             <label for="" class="poppinsSemibold text-sm">Select A Bank</label>
             <select
+              required
               class="select text-gray-500 rounded-4xl bg-[#F4F5F7] border-none mt-2"
             >
               <option class="">Select back</option>
@@ -108,6 +113,7 @@
               >Bank Account Number</label
             >
             <input
+              required
               id="bank-acc-input"
               type="text"
               placeholder="Enter your number"
@@ -117,6 +123,7 @@
           <div class="mt-3">
             <label for="" class="poppinsSemibold text-sm">Amount to Add</label>
             <input
+              required
               id="amount-input"
               type="text"
               placeholder="Enter your number"
@@ -126,6 +133,7 @@
           <div class="mt-3">
             <label for="" class="poppinsSemibold text-sm">4 Digit Pin</label>
             <input
+              required
               id="pin-input"
               type="text"
               placeholder="Enter 4 Digit Pin"
@@ -141,15 +149,14 @@
         </form>
       </div>
       <!-- Cash Out Form Section-->
-      <div id="cash-out-parent" style="display: none;">
+      <div class="forms" id="cash-out-parent" style="display: none">
         <h1 class="ml-5 text-sm my-4 poppinsBold">Cash Out</h1>
 
         <form class="p-7 bg-white w-[340px] rounded-2xl mx-auto">
           <div>
-            <label for="" class="poppinsSemibold text-sm"
-              >Agent Number</label
-            >
+            <label for="" class="poppinsSemibold text-sm">Agent Number</label>
             <input
+              required
               id="bank-acc-input"
               type="text"
               placeholder="Enter 11 digit number"
@@ -159,6 +166,7 @@
           <div class="mt-3">
             <label for="" class="poppinsSemibold text-sm">Amount</label>
             <input
+              required
               id="withdraw-amount"
               type="text"
               placeholder="Enter amount to withdraw"
@@ -168,6 +176,7 @@
           <div class="mt-3">
             <label for="" class="poppinsSemibold text-sm">Pin Number</label>
             <input
+              required
               id="pin-input"
               type="text"
               placeholder="Enter 4 Digit Pin Number"
@@ -181,6 +190,143 @@
             Withdraw Money
           </button>
         </form>
+      </div>
+      <!-- Transfer Money Form Section-->
+      <div class="forms" id="transfer-parent" style="display: none">
+        <h1 class="ml-5 text-sm my-4 poppinsBold">Transfer Money</h1>
+
+        <form class="p-7 bg-white w-[340px] rounded-2xl mx-auto">
+          <div>
+            <label for="" class="poppinsSemibold text-sm"
+              >User Account Number</label
+            >
+            <input
+              required
+              id="user-acc-input"
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input border-none bg-[#F4F5F7] text-sm rounded-full mt-2"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="" class="poppinsSemibold text-sm">Amount</label>
+            <input
+              required
+              id="transfer-amount"
+              type="text"
+              placeholder="Enter amount to withdraw"
+              class="input border-none bg-[#F4F5F7] text-sm rounded-full mt-2"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="" class="poppinsSemibold text-sm">Pin Number</label>
+            <input
+              required
+              id="transfer-pin-input"
+              type="text"
+              placeholder="Enter 4 Digit Pin Number"
+              class="input border-none rounded-full text-sm bg-[#F4F5F7] mt-2"
+            />
+          </div>
+          <button
+            id="send-btn"
+            class="btn rounded-full w-full bg-[#0874F2] text-white mt-4"
+          >
+            Send Now
+          </button>
+        </form>
+      </div>
+      <!-- Get Bonus Form Section-->
+      <div class="forms" id="bonus-parent" style="display: none">
+        <h1 class="ml-5 text-sm my-4 poppinsBold">Get Bonus</h1>
+
+        <form class="p-7 bg-white w-[340px] rounded-2xl mx-auto">
+          <div>
+            <label for="" class="poppinsSemibold text-sm"
+              >Enter Bonus Coupon</label
+            >
+            <input
+              required
+              id="coupon-input"
+              type="text"
+              placeholder="Enter your Coupon"
+              class="input border-none bg-[#F4F5F7] text-sm rounded-full mt-2"
+            />
+          </div>
+          <button
+            id="get-bonus-btn"
+            class="btn rounded-full w-full bg-[#0874F2] text-white mt-4"
+          >
+            Get Bonus
+          </button>
+        </form>
+      </div>
+      <!-- Paybill Form Section-->
+      <div class="forms" id="paybill-parent" style="display: none">
+        <h1 class="ml-5 text-sm my-4 poppinsBold">Paybill</h1>
+
+        <form class="p-7 bg-white w-[340px] rounded-2xl mx-auto">
+          <div class="mb-3">
+            <label for="" class="poppinsSemibold text-sm">Where to Pay</label>
+            <select
+              required
+              id="bill-sector"
+              class="select text-gray-500 rounded-4xl bg-[#F4F5F7] border-none mt-2"
+            >
+              <option disabled selected>Select Bill</option>
+              <option>Electricity Bill</option>
+              <option>Water Bill</option>
+              <option>Credit Card Bill</option>
+            </select>
+          </div>
+          <div>
+            <label for="" class="poppinsSemibold text-sm"
+              >Biller Account Number</label
+            >
+            <input
+              required
+              id="biller-acc"
+              type="text"
+              placeholder="Enter account number"
+              class="input border-none bg-[#F4F5F7] text-sm rounded-full mt-2"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="" class="poppinsSemibold text-sm">Amount to Pay</label>
+            <input
+              required
+              id="payment-amount"
+              type="text"
+              placeholder="Add amount to Pay"
+              class="input border-none bg-[#F4F5F7] text-sm rounded-full mt-2"
+            />
+          </div>
+          <div class="mt-3">
+            <label for="" class="poppinsSemibold text-sm">Pin Number</label>
+            <input
+              required
+              id="bill-pin"
+              type="text"
+              placeholder="Enter Your Pin Number"
+              class="input border-none rounded-full text-sm bg-[#F4F5F7] mt-2"
+            />
+          </div>
+          <button
+            id="pay-btn"
+            class="btn rounded-full w-full bg-[#0874F2] text-white mt-4"
+          >
+            Pay Now
+          </button>
+        </form>
+      </div>
+      <!-- Transaction Section-->
+      <div class="forms" id="transaction-parent" style="display: none">
+        <div class="flex items-center justify-between pr-5">
+          <h1 class="ml-5 text-sm my-4 poppinsBold">Transaction</h1>
+          <p class="text-xs text-gray-600">view all</p>
+        </div>
+
+        <div class="cards-container px-5"></div>
       </div>
     </div>
     <script src="home.js"></script>
